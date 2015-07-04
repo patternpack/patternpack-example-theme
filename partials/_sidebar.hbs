@@ -1,0 +1,30 @@
+<nav class="library__nav">
+{{#forEach this.patternStructure}}
+  <h2><a href="
+  {{!-- Look for an index.html file that is at the root of this folder --}}
+  {{!-- If it exists point to it as for the url of this link --}}
+  {{#withSort ../pages "data.title"}}
+  {{#contains dirname ../this.path}}
+  {{#is pagename "index.html"}}
+    {{relative ../../../../page.dest dest}}
+  {{/is}}
+  {{/contains}}
+  {{/withSort}}
+  ">{{this.name}}</a></h2>
+
+  <ul>
+    {{!-- For this category write links only for pages in the same folder --}}
+    {{#withSort ../pages "data.title"}}
+    {{#contains dirname ../this.path}}
+    {{#isnt pagename "index.html"}}
+
+    <li>
+      <a href="{{relative ../../../../page.dest dest}}">{{data.title}}</a>
+    </li>
+
+    {{/isnt}}
+    {{/contains}}
+    {{/withSort}}
+  </ul>
+  {{/forEach}}
+</nav>

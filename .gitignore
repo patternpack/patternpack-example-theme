@@ -1,0 +1,16 @@
+# PatternPack Example Theme specific
+src/assets/css/patterns.css*
+src/assets/sass/patternpack-patterns.scss
+
+# Project directories
+node_modules/
+bower_components/
+
+# OS & project generated files
+*.orig
+*.log
+.log
+.DS_Store?
+ehthumbs.db
+Icon?
+Thumbs.db
