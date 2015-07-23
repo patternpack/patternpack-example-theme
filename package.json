@@ -1,7 +1,7 @@
 {
   "name": "patternpack-example-theme",
   "description": "Defines the look and feel of the navigation for a Pattern Pack library",
-  "version": "0.0.1-alpha.1",
+  "version": "0.0.1-alpha.2",
   "license": "MIT",
   "readme": "readme.md",
   "devDependencies": {
