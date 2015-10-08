@@ -32,7 +32,7 @@ module.exports = function(grunt) {
           './partials/**',
           './theme-assets/**'
         ],
-        dest: '/Users/marcelo/development/patternpack/patternpack-example-library/node_modules/patternpack/node_modules/patternpack-example-theme'
+        dest: ''
       }
     },
 
