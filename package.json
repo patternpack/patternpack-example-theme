@@ -1,7 +1,7 @@
 {
   "name": "patternpack-example-theme",
-  "description": "Defines the look and feel of the navigation for a Pattern Pack library",
-  "version": "0.0.1-alpha.3",
+  "description": "The base theme for PatternPack",
+  "version": "1.0.0-beta1",
   "license": "MIT",
   "devDependencies": {
     "autoprefixer-core": "latest",
