@@ -1,0 +1,64 @@
+// Styling of all component documentation need to live in this block
+// The :not(.library__example) ensures that our documentation styles don't
+// override the actual project example code. Each child has to be a direct
+// descendant (>) to ensure all hierarchy works
+// References:
+// https://developer.mozilla.org/en-US/docs/Web/CSS/:not
+// http://stackoverflow.com/questions/14900763/css-selector-for-not-a-child-of-element-type
+.markdown__body {
+  &:not(.library__example) {
+    h1 {
+      font-size: 32px;
+      font-weight: bold;
+      border-bottom: 1px solid $gray-medium;
+      padding-bottom: 10px;
+    }
+
+    h2 {
+      margin-bottom: 20px;
+      border-bottom: 1px solid $gray-medium;
+      padding-bottom: 10px;
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    h3 {
+      margin-top: 10px;
+      margin-bottom: 20px;
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    p {
+      margin-bottom: 1em;
+      font-size: 18px;
+    }
+
+    em {
+      font-style: italic;
+    }
+
+    code {
+      padding: 3px;
+      background-color: $gray-light;
+      border: 1px solid $gray-medium;
+      border-radius: 3px;
+      font-family: $monospace;
+      font-size: 16px;
+
+      &.hljs {
+        padding: 15px;
+        line-height: 1.5em;
+      }
+    }
+
+    a {
+      color: $blue;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
