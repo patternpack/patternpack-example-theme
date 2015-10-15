@@ -1,1 +1,33 @@
-<!DOCTYPE html><html><head>  <link href="{{assets}}/css/patterns.css" rel="stylesheet" />  <link href="{{themeassets}}/css/patternpack-theme.css" rel="stylesheet" />  <link href="{{themeassets}}/css/github.css" rel="stylesheet" />  <meta name="viewport" content="width=device-width, initial-scale=1">  <title>{{title}}</title></head><body>  <div id="libraryContainer" class="library__container">    <header class="library__header">      <a href="/"><img src="http://placehold.it/200x60&text=logo" class="library__header__logo"></span>      <span class="library__header__title">Pattern Library</span></a>      <div id="menuToggle" class="library__header__menu-toggle__container">        <div class="library__header__toggle">Menu</div>      </div>    </header>    <div id="libraryContent" class="library__content">      <div class="library__content__open-overlay"></div>      <div class="markdown__body">        {{#markdown}}        {{> body }}        {{/markdown}}      </div>    </div>  </div>  {{> _sidebar}}  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.6/highlight.min.js"></script>  <script src="{{themeassets}}/js/PatternPack.Global.Navigation.js"></script></body></html>
+<!DOCTYPE html>
+<html>
+<head>
+ <link href="{{assets}}/css/{{cssFileName}}" rel="stylesheet" />
+ <link href="{{themeassets}}/css/patternpack-theme.css" rel="stylesheet" />
+ <link href="{{themeassets}}/css/github.css" rel="stylesheet" />
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <title>{{title}}</title>
+</head>
+<body>
+ <div id="libraryContainer" class="pp-container">
+   <header class="pp-header">
+     <a href="/">
+       <img src="{{logo}}" class="pp-header__logo">
+     </a>
+     <div id="menuToggle" class="pp-menu-toggle">
+       <div class="pp-menu-toggle__hamburger">Menu</div>
+     </div>
+   </header>
+   <div id="libraryContent" class="pp-content">
+     <div class="markdown__body">
+       {{#markdown}}
+       {{> body }}
+       {{/markdown}}
+     </div>
+   </div>
+   <div id="menuOverlay" class="pp-open-overlay"></div>
+ </div>
+ {{> _sidebar}}
+ <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.6/highlight.min.js"></script>
+ <script src="{{themeassets}}/js/PatternPack.Global.Navigation.js"></script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+// Color swatches show up in the example but are still scoped to the library,
+// therefore we don't put them in the :not block above
+.library__color-swatch {
+  float: left;
+  margin-right: 2%;
+  margin-bottom: 15px;
+  width: 48%;
+  border: 1px solid $gray-medium;
+  padding: 5px;
+  border-radius: 3px;
+
+  &:nth-child(even) {
+    margin-right: 0;
+  }
+
+  @include respond-to("small") {
+    width: 20%;
+
+    &:nth-child(even) {
+      margin-right: 2%;   // reset the override at natural size
+    }
+
+    &:nth-child(4n+4) {
+      margin-right: 0;
+    }
+  }
+}
+
+.library__color-swatch__preview {
+  display: block;
+  margin-bottom: 10px;
+  height: 75px;
+}
+
+.library__color-swatch__details {
+  padding: 0;
+  list-style: none;
+}

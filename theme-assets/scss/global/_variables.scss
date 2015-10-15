@@ -1,0 +1,46 @@
+// Variables
+
+// Color
+$white: #fff;
+$gray-light: #f2f2f2;
+$gray-medium: #dadada;
+$gray-dark: #4a4a4a;
+
+$blue: #4078c0;
+
+
+
+// Typography
+$sans-serif: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+$monospace: 'Inconsolata', Courier, monospace;
+
+
+
+// Timings
+$sidebar-toggle-timing: 200ms;
+
+
+
+// Responsive
+$breakpoints: (
+  'small' : (min-width: 790px)
+);
+
+// Use the @import respond-to() mixin to handle responsive breakpoints. You
+// must pass in a value inside the $breakpoints array.
+
+@mixin respond-to($name) {
+  // If the key exists in the map
+  @if map-has-key($breakpoints, $name) {
+    // Prints a media query based on the value
+    @media #{inspect(map-get($breakpoints, $name))} {
+      @content;
+    }
+  }
+
+  // If the key doesn't exist in the map
+  @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+        + "Please make sure it is defined in `$breakpoints` map.";
+  }
+}

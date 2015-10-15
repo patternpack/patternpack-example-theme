@@ -22,11 +22,42 @@ module.exports = function(grunt) {
       dist: {
         src: 'theme-assets/css/*.css'
       }
+    },
+
+    copy: {
+      development: {
+        expand: true,
+        src: [
+          './layouts/**',
+          './partials/**',
+          './theme-assets/**'
+        ],
+        dest: ''
+      }
+    },
+
+    watch: {
+      styles: {
+        files: [
+          './theme-assets/scss/**/*.scss'
+        ],
+        tasks: ['styles', 'copy:development']
+      },
+      templates: {
+        files: [
+          '**/*.hbs'
+        ],
+        tasks: ['copy:development']
+      }
     }
   });
 
+  grunt.loadNpmTasks('grunt-contrib-copy');
+  grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-sass');
   grunt.loadNpmTasks('grunt-postcss');
 
-  grunt.registerTask('default', ['sass', 'postcss']);
+  grunt.registerTask('styles', ['sass', 'postcss']);
+  grunt.registerTask('develop', ['styles', 'watch']);
+  grunt.registerTask('default', ['styles']);
 }

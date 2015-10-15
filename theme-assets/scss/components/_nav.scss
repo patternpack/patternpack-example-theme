@@ -1,0 +1,49 @@
+.pp-nav {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  right: 0;
+  overflow-y: scroll;
+  width: 350px;
+  height: 100%;       // ensure the navbar stretches the height of the screen
+  background-color: $gray-dark;
+  padding: 15px 0;
+  color: $white;
+  box-shadow: 5px 0 10px -2px rgba(0,0,0,0.2) inset;
+
+  a {
+    width: 100%;
+    display: inline-block;
+    padding: 15px;
+    text-decoration: none;
+  }
+
+  ul {
+    margin: 0 0 50px;
+    padding-left: 0;
+    list-style: none;
+  }
+
+  li {
+    border-bottom: 1px solid #717171;
+
+    a {
+      color: #fff;
+      font-size: 18px;
+      font-weight: 300;
+
+      &:hover {
+        background-color: darken($gray-dark, 10%);
+      }
+    }
+  }
+}
+
+.pp-nav__heading {
+  a {
+    color: #B8B8B8;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+}
