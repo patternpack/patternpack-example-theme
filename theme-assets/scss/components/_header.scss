@@ -1,0 +1,59 @@
+// Header
+
+.pp-header {
+  position: relative;
+  margin-bottom: 120px;
+  padding-left: 20px;
+  padding-right: 20px;
+  height: 60px;
+  background-color: $gray-light;
+  border-bottom: 1px solid $gray-medium;
+}
+
+.pp-header__logo {
+  max-height: 30px;
+  margin-top: 15px;
+}
+
+.pp-menu-toggle {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 100px;
+  height: 100%;
+  cursor: pointer;
+}
+
+.pp-menu-toggle__hamburger {
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
+  width: 25px;
+  height: 5px;
+  float: right;
+  text-indent: -999em;
+  background-color: black;
+  transition: all $sidebar-toggle-timing ease;
+
+  &:before, &:after {
+    content: '';
+    position: absolute;
+    right: 0;
+    display: block;
+    width: 25px;
+    height: 5px;
+    background-color: black;
+    border-radius: 3px;
+    transition: all $sidebar-toggle-timing ease;
+  }
+
+  &:before {
+    top: -9px;
+  }
+
+  &:after {
+    top: 9px;
+  }
+}

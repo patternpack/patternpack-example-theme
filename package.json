@@ -1,12 +1,14 @@
 {
   "name": "patternpack-example-theme",
-  "description": "Defines the look and feel of the navigation for a Pattern Pack library",
-  "version": "0.0.1-alpha.3",
+  "description": "The base theme for PatternPack",
+  "version": "1.0.0",
   "license": "MIT",
   "devDependencies": {
-    "autoprefixer-core": "latest",
-    "grunt": "latest",
-    "grunt-postcss": "latest",
+    "autoprefixer": "^6.0.3",
+    "grunt": "^0.4.5",
+    "grunt-contrib-copy": "^0.8.1",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-postcss": "^0.6.0",
     "grunt-sass": "latest"
   },
   "repository": {

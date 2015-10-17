@@ -1,0 +1,66 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: $sans-serif;
+  color: $gray-dark;
+  margin: 0;
+}
+
+.pp-container {
+  position: absolute;
+  z-index: 200;
+  min-height: 100%;
+  width: 100%;
+  right: 0;
+  transition: all $sidebar-toggle-timing ease;
+  background-color: $white;
+
+  &.open {
+    right: 350px;
+
+    // The hamburger transformed to an X when opened
+    .pp-menu-toggle__hamburger {
+      background-color: transparent;
+
+      &:before,
+      &:after {
+        top: 0;
+      }
+
+      &:before {
+        transform: rotate(-45deg);
+      }
+
+      &:after {
+        transform: rotate(45deg);
+      }
+    }
+
+    .pp-open-overlay {
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      background-color: rgba(0,0,0,0.4);
+      cursor: pointer;
+    }
+  }
+}
+
+.pp-content {
+  max-width: 750px;
+  margin: 0 20px;
+
+  @include respond-to("small") {
+    margin: 0 auto;
+  }
+}

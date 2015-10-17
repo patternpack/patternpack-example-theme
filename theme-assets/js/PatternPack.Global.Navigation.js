@@ -5,11 +5,13 @@ PatternLibrary.Global.Navigation = function() {
   var _libraryContainer = null;
   var _libraryContent = null;
   var _menuLink = null;
+  var _menuOverlay = null;
 
   function initializeDomElements() {
     _libraryContainer = document.getElementById('libraryContainer');
     _libraryContent = document.getElementById('libraryContent');
     _menuLink = document.getElementById('menuToggle');
+    _menuOverlay = document.getElementById('menuOverlay');
   }
 
   // Checks if the menu is open, then closes it
@@ -31,7 +33,7 @@ PatternLibrary.Global.Navigation = function() {
 
   function wireEvents() {
     _menuLink.addEventListener("click", toggleMenu, false);
-    _libraryContent.addEventListener("click", closeMenu, false);
+    _menuOverlay.addEventListener("click", closeMenu, false);
   }
 
   function initialize() {
