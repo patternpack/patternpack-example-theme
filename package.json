@@ -1,7 +1,7 @@
 {
   "name": "patternpack-example-theme",
   "description": "The base theme for PatternPack",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "license": "MIT",
   "devDependencies": {
     "autoprefixer": "^6.0.3",
