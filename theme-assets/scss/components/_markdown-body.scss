@@ -7,14 +7,14 @@
 // http://stackoverflow.com/questions/14900763/css-selector-for-not-a-child-of-element-type
 .markdown__body {
   &:not(.library__example) {
-    h1 {
+    >h1:not(.library__example) {
       font-size: 32px;
       font-weight: bold;
       border-bottom: 1px solid $gray-medium;
       padding-bottom: 10px;
     }
 
-    h2 {
+    >h2:not(.library__example) {
       margin-bottom: 20px;
       border-bottom: 1px solid $gray-medium;
       padding-bottom: 10px;
@@ -22,23 +22,32 @@
       font-weight: bold;
     }
 
-    h3 {
+    >h3:not(.library__example) {
       margin-top: 10px;
       margin-bottom: 20px;
       font-size: 20px;
       font-weight: bold;
     }
 
-    p {
+    >p:not(.library__example) {
       margin-bottom: 1em;
       font-size: 18px;
+
+      a {
+        color: $blue;
+        text-decoration: none;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+
+      em {
+        font-style: italic;
+      }
     }
 
-    em {
-      font-style: italic;
-    }
-
-    code {
+    >code:not(.library__example) {
       padding: 3px;
       background-color: $gray-light;
       border: 1px solid $gray-medium;
@@ -49,15 +58,6 @@
       &.hljs {
         padding: 15px;
         line-height: 1.5em;
-      }
-    }
-
-    a {
-      color: $blue;
-      text-decoration: none;
-
-      &:hover {
-        text-decoration: underline;
       }
     }
   }
