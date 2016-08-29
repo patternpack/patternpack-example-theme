@@ -23,7 +23,7 @@ PatternLibrary.Global.Navigation = function() {
     }
   }
 
-  function toggleMenu() {
+  function toggleMenu(event) {
     event.preventDefault();
 
     if (_libraryContainer.classList) {
