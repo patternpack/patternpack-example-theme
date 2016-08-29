@@ -15,15 +15,15 @@ PatternLibrary.Global.Navigation = function() {
   }
 
   // Checks if the menu is open, then closes it
-  function closeMenu() {
+  function closeMenu(event) {
     if (_libraryContainer.classList) {
       if (_libraryContainer.classList.contains('open')) {
-        toggleMenu();
+        toggleMenu(event);
       }
     }
   }
 
-  function toggleMenu() {
+  function toggleMenu(event) {
     event.preventDefault();
 
     if (_libraryContainer.classList) {
